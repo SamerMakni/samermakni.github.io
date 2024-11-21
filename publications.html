@@ -1,0 +1,101 @@
+<style>
+    .paper {
+    margin-bottom: 5%;
+    margin-right: 30%;
+    }
+    .paper-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: 'SecondaryFont';
+    margin-bottom: 1%;
+    }
+    .authors, .journal, .conference {
+    font-style: normal;
+    margin-bottom: 1%;
+    font-size: 0.9em;
+    }
+    .abstract {
+    font-size: 0.9em;
+    margin-bottom: 1%;
+    font-weight: 400;
+    }
+    @font-face {
+    font-family: 'SecondaryFont';
+    src: local('SecondaryFont'), url('./fonts/secondary_font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    .abstract-title {
+    font-weight: bold;
+    font-family: 'SecondaryFont';
+    }
+    .keywords {
+    font-style: italic;
+    font-size: 0.9em;
+    }
+    .content-section {
+    margin-top: 180px;
+    }
+    .paper a {
+    color: black;
+    text-decoration: none;
+    }
+    .paper a:hover {
+    text-decoration: underline;
+    }
+ </style>
+ <div id="content" class="content-section">
+    <div class="paper">
+       <div class="paper-title">
+          <a href="https://cidalsdb.streamlit.app" target="_blank">CidalsDB: An AI-empowered platform for anti-pathogen therapeutics research</a>
+       </div>
+       <div class="authors">
+          Harigua-Souiai E, Masmoudi O, Makni S, Rafeh O, Z. Abdelkrim Y, Hamdi S, Souiai O, Guizani I
+       </div>
+       <div class="journal">
+          <em>Jounral of Chemoinformatics, Accepted for publication.</em>
+       </div>
+       <br>
+       <div class="abstract">
+          <span class="abstract-title">Abstract:</span> Computer-aided drug discovery (CADD) is nurtured by late advances in big
+          data analytics and Artificial Intelligence (AI) towards enhanced drug discovery
+          (DD) outcomes. In this context, reliable datasets are of utmost importance. We
+          herein present CidalsDB a novel web server for AI-assisted DD against infectious pathogens, namely Leishmania parasites and Coronaviruses. We performed
+          a literature search on molecules with validated anti-pathogen effects. Then, we
+          consolidated these data with bioassays from PubChem. Finally, we constructed
+          a database to store these datasets and make them accessible and ready-to-use
+          for the scientific community through CidalsDB, a web-based interface. In a second step, we implemented and optimized four ML and one DL algorithms that
+          optimally predict the biological activity of molecules. Random Forests (RF)
+          and Multi-Layer Perceptron (MLP) were the best classifiers of anti-Leishmania
+          molecules, while Gradient Boosting (GB) and Graph-Convolutional Network
+          (GCN) achieved the best performances on the Coronaviruses dataset. All four
+          models were optimized and deployed through CidalsDB as anti-pathogen activity prediction models. Scientific Contribution. CidalsDB is an open access
+          web-based tool that allows browsing and access to ready-to-use datasets of antipathogen molecules, alongside best performing AI models for biological activity
+          prediction. It offers a democratized no-code platform for AI-based CADD, which
+          shall foster innovation and collaboration within the DD community. CidalsDB is
+          accessible through  <a href="https://cidalsdb.streamlit.app" target="_blank">cidalsdb.streamlit.app</a>.
+       </div>
+       <div class="keywords">
+          Keywords: Machine Learning, Deep Learning, Drug Discovery
+       </div>
+    </div>
+    <br>
+    <div class="paper">
+       <div class="paper-title">
+          <a href="https://drive.google.com/file/d/1GJx6odJRe5Iu46hByAwT5-Y7xTD5o0cS/view" target="_blank">Harnessing Data Encoding Towards Optimizing Machine Learning Algorithms in Drug Discovery</a>
+       </div>
+       <div class="authors">
+          Makni S, Masmoudi O, Doggaz N, Harigua-Souiai E
+       </div>
+       <div class="conference">
+          <em>3rd Colloque Jeunes Chercheurs, Tunis, Tunisia, 2023</em>
+       </div>
+       <br>
+       <div class="abstract">
+          <span class="abstract-title">Abstract:</span> Drug discovery is a resource-intensive process that involves extensive research and development to identify potential new drugs. Combining artificial intelligence approaches with bioinformatics can provide a cost-effective solution for accelerating this process. In this project, our focus is on featurizing molecules and implementing multiple machine learning models to classify molecules as potential drug candidates for Leishmania, a neglected tropical disease.
+       </div>
+       <div class="keywords">
+          Keywords: data encoding, machine learning, drug discovery, optimization
+       </div>
+    </div>
+ </div>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/ico" sizes="32x32" href="icon.ico">
+      <link rel="stylesheet" href="assets/default.min.css">
+      <script src="assets/highlight.min.js"></script>
+      <script id="MathJax-script" async
+         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <style>
+         .content-section {
+         margin-top: 180px; 
+         margin-right: 100px;
+         margin-left: -40px;
+         }
+         .icon {
+         width: 16px;
+         height: 16px;
+         vertical-align: middle; 
+         margin-right: 8px;
+         }
+         .lista {
+         display: inline-block;
+         list-style-type: none;
+         }
+         .lista li span {
+         text-decoration: none; 
+         }
+         .lista li {
+         display: inline-block;
+         padding-right: 10px;
+         font-size: 18px;
+         }
+         section.hidden {
+         display: none;
+         }
+         section {
+         margin-left: 40px;
+         }
+         span:hover {
+         cursor: pointer;
+         }
+         .clicked {
+         font-family: 'SecondaryFont';
+         }
+      </style>
+   </head>
+   <body>
+      <div id="content" class="content-section">
+         <ul class="lista">
+            <li>
+               <span onClick="mover('project_1', event)">CidalsDB</span>
+            </li>
+            <li>
+               <span onClick="mover('project_2', event)" >Cuda Selector</span>
+            </li>
+            <li>
+               <span onClick="mover('project_3', event)">GKAN</span>
+            </li>
+            <li>
+               <span onClick="mover('project_4', event)">Hilbert Curve Image to Sound</span>
+            </li>
+            <li>
+               <span onClick="mover('project_4', event)">Streamlit Menu</span>
+            </li>
+            <li>
+               <span onClick="mover('project_4', event)">TGKAN</span>
+            </li>
+         </ul>
+         <section id="project_1" class="hidden menusection">
+            <img src="assets/cidals.gif" alt="cidals" class="project-gif">
+            <p>
+               CidalsDB is an open resource on anti-pathogen molecules that provides a chemical similarity-based browsing function and an AI-based prediction tool for the 'cidal' effect of chemical compounds against pathogens. These include Leishmania parasites1 and Coronaviruses (SARS-Cov, SARS-Cov-2, MERS).
+               CidalsDB serves as an evolutive platform for democratized and no-code Computer-Aided Drug Discovery (CADD).    
+            </p>
+            <div class="project-links">
+               <a href="https://github.com/Harigua/CidalsDB/tree/main" target="_blank">
+               <img src="./assets/github-logo.png" alt="GitHub Icon" class="icon">GitHub
+               </a>
+               <!-- <a href="https://pypi.org/project/gkan1/" target="_blank">
+                  <img src="./assets/pypi_logo_icon_144959.png" alt="PyPI Icon" class="icon">PyPI
+                  </a> -->
+            </div>
+         </section>
+         <section id="project_2" class="hidden menusection">
+            <p>
+               A simple tool to select the optimal CUDA device based on memory, power, or utilization.
+            </p>
+            <h4>Install</h4>
+            <br>
+            <pre><code class="language-bash">pip install cuda-selector</code></pre>
+            <br>
+            <h4>Usage</h4>
+            <p>Here's an example function:</p>
+            <pre><code class="language-python">from cuda_selector import auto_cuda
+        # Select cuda device with most memory available
+        device = auto_cuda()
+        
+        # Select cuda device with lowest power usasge usage
+        device = auto_cuda('power')
+        
+        # Select cuda device with lowest power usasge usage
+        device = auto_cuda('utilization')
+    </code></pre>
+            <br>
+            <div class="project-links">
+               <a href="https://github.com/SamerMakni/cuda-selector target="_blank">
+               <img src="./assets/github-logo.png" alt="GitHub Icon" class="icon">GitHub
+               </a>
+               <a href="https://pypi.org/project/cuda-selector/" target="_blank">
+               <img src="./assets/pypi_logo_icon_144959.png" alt="PyPI Icon" class="icon">PyPI
+               </a>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+            <script>hljs.highlightAll();</script>
+         </section>
+         <section id="project_3" class="hidden menusection">
+            <p>
+               A PyTorch implementation of a Kolmogorov-Arnold Network (KAN) adapted for graph-structured data, leveraging advanced KAN-based layers for function decomposition. 
+               The model architecture consists of several key components:
+            </p>
+            <ul>
+               <li>
+                  <strong>Input Layer:</strong> A linear transformation is applied to node feature vectors, mapping them from the input dimension \(d_{\text{in}}\) to a hidden dimension \(d_{\text{hidden}}\). This step can be expressed as:
+                  \[
+                  \mathbf{h}_0 = \mathbf{X} \mathbf{W}_{\text{input}} + \mathbf{b}_{\text{input}}
+                  \]
+                  where \(\mathbf{X} \in \mathbb{R}^{N \times d_{\text{in}}}\) represents node features, and \(\mathbf{W}_{\text{input}}\) and \(\mathbf{b}_{\text{input}}\) are learnable parameters.
+               </li>
+               <li>
+                  <strong>Graph-KAN Layers:</strong> A stack of \(L\) KAN-based layers applies the Kolmogorov-Arnold decomposition to refine node representations. The layers include; such as 
+                  <a href="https://arxiv.org/abs/2404.19756" target="_blank">KAN</a>, 
+                  <a href="https://github.com/SynodicMonth/ChebyKAN/tree/main" target="_blank">ChebyKAN</a>, 
+                  <a href="https://github.com/ZiyaoLi/fast-kan" target="_blank">FastKAN</a>, and 
+                  <a href="https://github.com/GistNoesis/FourierKAN" target="_blank">FourierKAN</a>, 
+                  Each KAN layer can be represented as:
+                  \[
+                  \mathbf{h}_{\ell} = \phi_{\ell}(\mathbf{h}_{\ell-1}) + \psi_{\ell}(\mathbf{h}_{\ell-1}),
+                  \]
+                  where \(\phi_{\ell}\) and \(\psi_{\ell}\) are univariate functions approximated by the selected KAN layer type.
+               </li>
+               <li>
+                  <strong>Graph Aggregation:</strong> Node features are propagated using the sparse adjacency matrix \(\mathbf{A}\), enabling the model to incorporate structural information. This step is performed as:
+                  \[
+                  \mathbf{h}_{\ell} = \mathbf{A} \mathbf{h}_{\ell}.
+                  \]
+               </li>
+               <li>
+                  <strong>Output Layer:</strong> A fully connected layer maps the hidden features to the output dimension \(d_{\text{out}}\), representing the node class probabilities:
+                  \[
+                  \mathbf{y} = \text{softmax}(\mathbf{h}_{L} \mathbf{W}_{\text{output}}).
+                  \]
+               </li>
+            </ul>
+            <p>
+               The model was tested on the <strong>Cora dataset</strong>.
+            </p>
+            <div class="project-links">
+               <a href="https://github.com/SamerMakni/GKAN" target="_blank">
+               <img src="./assets/github-logo.png" alt="GitHub Icon" class="icon">GitHub
+               </a>
+            </div>
+         </section>
+         </section>
+         <section id="project_4" class="hidden menusection">
+            <h3>to be added</h3>
+         </section>
+         <section id="project_5" class="hidden menusection">
+            <h3>to be added</h3>
+         </section>
+         <section id="project_6" class="hidden menusection">
+            <h3>to be added</h3>
+         </section>
+      </div>
+   </body>
+</html>
