@@ -85,8 +85,7 @@
          </section>
          <section id="project_2" class="hidden menusection">
             <p>
-               A simple tool to select the optimal CUDA device based on memory, power, or utilization.
-            </p>
+               A simple tool to select the optimal CUDA device based on memory, power, temperature, or utilization. It supports fallback to CPU and custom sorting functions. Supports CUDA devices on Linux and MPS devices on macOS.            </p>
             <h4>Install</h4>
             <br>
             <pre><code class="language-bash">pip install cuda-selector</code></pre>
@@ -94,15 +93,26 @@
             <h4>Usage</h4>
             <p>Here's an example function:</p>
             <pre><code class="language-python">from cuda_selector import auto_cuda
-        # Select cuda device with most memory available
-        device = auto_cuda()
-        
-        # Select cuda device with lowest power usasge usage
-        device = auto_cuda('power')
-        
-        # Select cuda device with lowest power usasge usage
-        device = auto_cuda('utilization')
-    </code></pre>
+# Select the CUDA device with the most free memory
+device = auto_cuda()
+
+# Select the CUDA device with the lowest power usage
+device = auto_cuda(criteria='power')
+
+# Select the CUDA device with the lowest utilization
+device = auto_cuda(criteria='utilization')
+
+# Select multiple devices (top 3) based on memory, with a custom sorting function
+device_list = auto_cuda(n=3, sort_fn=lambda d: d['mem'] * 0.7 + d['util'] * 0.3)
+
+# Exclude a specific device (e.g., device 0) from selection
+device = auto_cuda(exclude={0})
+
+# Apply thresholds for power and utilization
+device = auto_cuda(thresholds={'power': 150, 'utilization': 50})</code></pre>
+            <br>
+            Full documentation can be found <a href="https://samermakni.github.io/cuda-selector/" target="_blank">here</a>.
+            <br>
             <br>
             <div class="project-links">
                <a href="https://github.com/SamerMakni/cuda-selector target="_blank">
