@@ -23,152 +23,231 @@
          figure, figcaption, footer, header, hgroup, 
          menu, nav, output, ruby, section, summary,
          time, mark, audio, video {
-         margin: 0;
-         padding: 0;
-         border: 0;
-         font-size: 100%;
-         font: inherit;
-         vertical-align: baseline;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
          }
          article, aside, details, figcaption, figure, 
          footer, header, hgroup, menu, nav, section {
-         display: block;
+            display: block;
          }
          body {
-         line-height: 1;
+            line-height: 1;
          }
          ol, ul {
-         list-style: none;
+            list-style: none;
          }
          blockquote, q {
-         quotes: none;
+            quotes: none;
          }
          blockquote:before, blockquote:after,
          q:before, q:after {
-         content: '';
-         content: none;
+            content: '';
+            content: none;
          }
          table {
-         border-collapse: collapse;
-         border-spacing: 0;
+            border-collapse: collapse;
+            border-spacing: 0;
          }
          body {
-         font-family: 'CMU';
-         margin: 0;
-         padding: 0;
-         display: flex;
+            font-family: 'CMU';
+            margin: 0;
+            padding: 0;
+            display: flex;
          }
          div {
-         display: block;
+            display: block;
          }
          h2 {
-         display: block;
-         font-size: 1.5em;
-         margin-block-start: 0em;
-         margin-block-end: 0.5em;
-         margin-inline-start: 0px;
-         margin-inline-end: 0.5em;
-         font-weight: bold;
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0em;
+            margin-block-end: 0.5em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0.5em;
+            font-weight: bold;
          }
          ul {
-         display: block;
-         list-style-type: disc;
-         margin-block-start: 1em;
-         margin-block-end: 1em;
-         margin-inline-start: 0px;
-         margin-inline-end: 0px;
-         padding-inline-start: 40px;
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
          }
          li {
-         display: list-item;
-         text-align: -webkit-match-parent;
+            display: list-item;
+            text-align: -webkit-match-parent;
          }
          a {
-         color: -webkit-link;
-         cursor: pointer;
-         text-decoration: underline;
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: underline;
          }
          p {
-         display: block;
-         margin-block-start: 1em;
-         margin-block-end: 1em;
-         margin-inline-start: 0px;
-         margin-inline-end: 0px;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
          }
          @font-face {
-         font-family: 'CMU';
-         src: local('CMU'), url('./fonts/main_font.ttf') format('truetype');
-         font-weight: 100;
-         font-style: normal;
+            font-family: 'CMU';
+            src: local('CMU'), url('./fonts/main_font.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
          }
          @font-face {
-         font-family: 'ArabicFont';
-         src: local('ArabicFont'), url('./fonts/arabic_font.otf') format('opentype');
-         font-weight: normal;
-         font-style: normal;
+            font-family: 'ArabicFont';
+            src: local('ArabicFont'), url('./fonts/arabic_font.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
          }
          @font-face {
-         font-family: 'SecondaryFont';
-         src: local('SecondaryFont'), url('./fonts/secondary_font.ttf') format('truetype');
-         font-weight: normal;
-         font-style: normal;
+            font-family: 'SecondaryFont';
+            src: local('SecondaryFont'), url('./fonts/secondary_font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
          }
          body {
-         font-family: 'CMU';
-         margin: 0;
-         padding: 0;
-         display: flex;
+            font-family: 'CMU';
+            margin: 0;
+            padding: 0;
+            display: flex;
          }
          #header h2 {
-         font-family: 'ArabicFont', 'CMU', sans-serif;
+            font-family: 'ArabicFont', 'CMU', sans-serif;
          }
          #sidebar {
-         width: 26%;
-         padding: 5%;
-         box-sizing: border-box;
+            width: 26%;
+            padding: 5%;
+            box-sizing: border-box;
+            background: white;
          }
          #main-content {
-         width: 70%;
-         padding: 0;
-         box-sizing: border-box;
-         transition: padding-top 0.3s ease;
+            width: 70%;
+            padding: 0;
+            box-sizing: border-box;
+            transition: padding-top 0.3s ease;
+         }
+         #main-content > * {
+            margin: 0;
+            padding: 20px;
          }
          #header {
-         padding: 1px;
-         margin-bottom: 15px;
-         cursor: pointer; 
+            padding: 1px;
+            margin-bottom: 15px;
+            cursor: pointer; 
          }
          #menu {
-         list-style-type: none;
-         padding: 0;
-         margin: 0;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
          }
          #menu li {
-         margin-bottom: 10px;
+            margin-bottom: 10px;
          }
          #menu a {
-         text-decoration: none;
-         font-size: 18px;
-         display: block;
-         padding: 0px;
-         color: black;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 0px;
+            color: black;
          }
          #menu a.selected {
-         font-family: 'SecondaryFont';
+            font-family: 'SecondaryFont';
          }
          .subbio {
-         font-size: 0.9em;
+            font-size: 0.9em;
+         }
+         #header-top {
+            display: flex;
+            flex-direction: column;
+         }
+
+         /* Responsive Design */
+         @media screen and (max-width: 768px) {
+            body {
+               flex-direction: column;
+            }
+            #sidebar {
+               width: 100%;
+               padding: 20px;
+               box-sizing: border-box;
+               background: white;
+            }
+            #main-content {
+               width: 100%;
+               padding: 0;
+               box-sizing: border-box;
+            }
+            #header-top {
+               position: fixed;
+               top: 0;
+               left: 0;
+               right: 0;
+               background: white;
+               padding: 10px 20px;
+               z-index: 1000;
+            }
+            #header {
+               margin-bottom: 0;
+            }
+            #menu {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-around;
+               align-items: center;
+               margin-top: 0;
+               padding: 10px 20px;
+               background: white;
+               position: fixed;
+               top: 0; /* Adjusted dynamically in JS */
+               left: 0;
+               right: 0;
+               z-index: 999;
+            }
+            #menu li {
+               margin-bottom: 0;
+               margin-right: 10px;
+            }
+            #menu li:last-child {
+               margin-right: 0;
+            }
+            #menu a {
+               font-size: 16px;
+               display: inline-block;
+               padding: 5px;
+            }
+         }
+         @media screen and (max-width: 480px) {
+            h2 {
+               font-size: 1.2em;
+            }
+            .subbio {
+               font-size: 0.8em;
+            }
+            #menu a {
+               font-size: 14px;
+               padding: 3px;
+            }
          }
       </style>
    </head>
    <body>
       <div id="sidebar">
-         <div id="header">
-            <div onclick=goHome()>
-               <h2>Samer Makni   سامر ماكني</h2>
-            </div>
-            <div onclick=goSztaki() class="subbio">
-               <p>Junior Researcher at HUN-REN Institute for Computer Science and Control</p>
+         <div id="header-top">
+            <div id="header">
+               <div onclick="goHome()">
+                  <h2>Samer Makni   سامر ماكني</h2>
+               </div>
+               <div onclick="goSztaki()" class="subbio">
+                  <p>Junior Researcher at HUN-REN Institute for Computer Science and Control</p>
+               </div>
             </div>
          </div>
          <ul id="menu">
@@ -182,46 +261,70 @@
       </div>
       <script>
          function loadContent(url) {
-             var menuItems = document.querySelectorAll('#menu a');
-             menuItems.forEach(item => {
-                 item.classList.remove('selected');
-             });
-         
-             fetch(url)
-                 .then(response => response.text())
-                 .then(data => {
-                     document.getElementById('main-content').innerHTML = data;
-                     if (window.MathJax) {
-                         MathJax.typeset();
-                     }
-                     if (window.hljs) {
-                 hljs.highlightAll();
-             }
-                 })
-           .catch(error => console.error('Error loading content:', error));
-             event.preventDefault();
-             var selectedItem = event.target;
-             selectedItem.classList.add('selected');
+            var menuItems = document.querySelectorAll('#menu a');
+            menuItems.forEach(item => {
+               item.classList.remove('selected');
+            });
+            fetch(url)
+               .then(response => response.text())
+               .then(data => {
+                  document.getElementById('main-content').innerHTML = data;
+                  if (window.MathJax) {
+                     MathJax.typeset();
+                  }
+                  if (window.hljs) {
+                     hljs.highlightAll();
+                  }
+                  // Re-adjust layout after content is loaded
+                  adjustLayout();
+               })
+               .catch(error => console.error('Error loading content:', error));
+            event.preventDefault();
+            var selectedItem = event.target;
+            selectedItem.classList.add('selected');
          }
          function goHome() {
-             var menuItems = document.querySelectorAll('#menu a');
-             menuItems.forEach(item => {
-                 item.classList.remove('selected');
-             });
-             document.getElementById('main-content').innerHTML = '';
+            var menuItems = document.querySelectorAll('#menu a');
+            menuItems.forEach(item => {
+               item.classList.remove('selected');
+            });
+            document.getElementById('main-content').innerHTML = '';
+            // Re-adjust layout after clearing content
+            adjustLayout();
          }
          function goSztaki() {
-             window.open("https://sztaki.hun-ren.hu/en", "_blank");
+            window.open("https://sztaki.hun-ren.hu/en", "_blank");
          }
-         
-         function mover(section_id, $event){
-             let menus = document.querySelectorAll(".menusection") 
-             menus.forEach((menu)=>{menu.classList.add('hidden');}) 
-             let section = document.querySelector(`#${section_id}`);
-             section.classList.remove('hidden');
-             menus = document.querySelectorAll(".lista li span") 
-             menus.forEach((menu)=>{menu.classList.remove('clicked');})
-             $event.target.classList.add("clicked")
+         // Adjust menu and main content positions
+         function adjustLayout() {
+            if (window.innerWidth <= 768) {
+               const headerHeight = document.getElementById('header-top').offsetHeight;
+               const menu = document.querySelector('#menu');
+               // Ensure menu is positioned below header
+               menu.style.top = `${headerHeight}px`;
+               // Calculate menu height including padding
+               const menuHeight = menu.offsetHeight;
+               // Set main content margin to start below menu
+               document.getElementById('main-content').style.marginTop = `${headerHeight + menuHeight}px`;
+               // Debugging log to verify heights
+               console.log(`Header Height: ${headerHeight}px, Menu Height: ${menuHeight}px, Main Content Margin-Top: ${headerHeight + menuHeight}px`);
+            } else {
+               const menu = document.querySelector('#menu');
+               menu.style.top = 'auto';
+               document.getElementById('main-content').style.marginTop = '0';
+            }
+         }
+         // Run on load and resize
+         window.addEventListener('load', adjustLayout);
+         window.addEventListener('resize', adjustLayout);
+         function mover(section_id, $event) {
+            let menus = document.querySelectorAll(".menusection");
+            menus.forEach((menu) => { menu.classList.add('hidden'); });
+            let section = document.querySelector(`#${section_id}`);
+            section.classList.remove('hidden');
+            menus = document.querySelectorAll(".lista li span");
+            menus.forEach((menu) => { menu.classList.remove('clicked'); });
+            $event.target.classList.add("clicked");
          }
       </script>
    </body>
