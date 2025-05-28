@@ -10,232 +10,302 @@
       <script>hljs.highlightAll();</script>
       <title>Samer Makni</title>
       <style>
-         html, body, div, span, applet, object, iframe,
-         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-         a, abbr, acronym, address, big, cite, code,
-         del, dfn, em, img, ins, kbd, q, s, samp,
-         small, strike, strong, sub, sup, tt, var,
-         b, u, i, center,
-         dl, dt, dd, ol, ul, li,
-         fieldset, form, label, legend,
-         table, caption, tbody, tfoot, thead, tr, th, td,
-         article, aside, canvas, details, embed, 
-         figure, figcaption, footer, header, hgroup, 
-         menu, nav, output, ruby, section, summary,
-         time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-         }
-         article, aside, details, figcaption, figure, 
-         footer, header, hgroup, menu, nav, section {
-            display: block;
-         }
-         body {
-            line-height: 1;
-         }
-         ol, ul {
-            list-style: none;
-         }
-         blockquote, q {
-            quotes: none;
-         }
-         blockquote:before, blockquote:after,
-         q:before, q:after {
-            content: '';
-            content: none;
-         }
-         table {
-            border-collapse: collapse;
-            border-spacing: 0;
-         }
-         body {
-            font-family: 'CMU';
-            margin: 0;
-            padding: 0;
-            display: flex;
-         }
-         div {
-            display: block;
-         }
-         h2 {
-            display: block;
-            font-size: 1.5em;
-            margin-block-start: 0em;
-            margin-block-end: 0.5em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0.5em;
-            font-weight: bold;
-         }
-         ul {
-            display: block;
-            list-style-type: disc;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            padding-inline-start: 40px;
-         }
-         li {
-            display: list-item;
-            text-align: -webkit-match-parent;
-         }
-         a {
-            color: -webkit-link;
-            cursor: pointer;
-            text-decoration: underline;
-         }
-         p {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-         }
-         @font-face {
-            font-family: 'CMU';
-            src: local('CMU'), url('./fonts/main_font.ttf') format('truetype');
-            font-weight: 100;
-            font-style: normal;
-         }
-         @font-face {
-            font-family: 'ArabicFont';
-            src: local('ArabicFont'), url('./fonts/arabic_font.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-         }
-         @font-face {
-            font-family: 'SecondaryFont';
-            src: local('SecondaryFont'), url('./fonts/secondary_font.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-         }
-         body {
-            font-family: 'CMU';
-            margin: 0;
-            padding: 0;
-            display: flex;
-         }
-         #header h2 {
-            font-family: 'ArabicFont', 'CMU', sans-serif;
-         }
-         #sidebar {
-            width: 26%;
-            padding: 5%;
-            box-sizing: border-box;
-            background: white;
-         }
-         #main-content {
-            width: 70%;
-            padding: 0;
-            box-sizing: border-box;
-            transition: padding-top 0.3s ease;
-         }
-         #main-content > * {
-            margin: 0;
-            padding: 20px;
-         }
-         #header {
-            padding: 1px;
-            margin-bottom: 15px;
-            cursor: pointer; 
-         }
-         #menu {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-         }
-         #menu li {
-            margin-bottom: 10px;
-         }
-         #menu a {
-            text-decoration: none;
-            font-size: 18px;
-            display: block;
-            padding: 0px;
-            color: black;
-         }
-         #menu a.selected {
-            font-family: 'SecondaryFont';
-         }
-         .subbio {
-            font-size: 0.9em;
-         }
-         #header-top {
-            display: flex;
-            flex-direction: column;
-         }
+         /* Ensure content within main-content has a max-width and consistent margins */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-         /* Responsive Design */
-         @media screen and (max-width: 768px) {
-            body {
-               flex-direction: column;
-            }
-            #sidebar {
-               width: 100%;
-               padding: 20px;
-               box-sizing: border-box;
-               background: white;
-            }
-            #main-content {
-               width: 100%;
-               padding: 0;
-               box-sizing: border-box;
-            }
-            #header-top {
-               position: fixed;
-               top: 0;
-               left: 0;
-               right: 0;
-               background: white;
-               padding: 10px 20px;
-               z-index: 1000;
-            }
-            #header {
-               margin-bottom: 0;
-            }
-            #menu {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-around;
-               align-items: center;
-               margin-top: 0;
-               padding: 10px 20px;
-               background: white;
-               position: fixed;
-               top: 0; /* Adjusted dynamically in JS */
-               left: 0;
-               right: 0;
-               z-index: 999;
-            }
-            #menu li {
-               margin-bottom: 0;
-               margin-right: 10px;
-            }
-            #menu li:last-child {
-               margin-right: 0;
-            }
-            #menu a {
-               font-size: 16px;
-               display: inline-block;
-               padding: 5px;
-            }
-         }
-         @media screen and (max-width: 480px) {
-            h2 {
-               font-size: 1.2em;
-            }
-            .subbio {
-               font-size: 0.8em;
-            }
-            #menu a {
-               font-size: 14px;
-               padding: 3px;
-            }
-         }
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'CMU', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+div {
+    display: block;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0.5em;
+    font-weight: bold;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+a {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@font-face {
+    font-family: 'CMU';
+    src: local('CMU'), url('./fonts/main_font.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArabicFont';
+    src: local('ArabicFont'), url('./fonts/arabic_font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SecondaryFont';
+    src: local('SecondaryFont'), url('./fonts/secondary_font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header h2 {
+    font-family: 'ArabicFont', 'CMU', sans-serif;
+}
+
+#sidebar {
+    width: 26%;
+    padding: 5%;
+    box-sizing: border-box;
+    background: white;
+}
+
+/* Main content styling */
+#main-content {
+    width: 70%;
+    padding: 0;
+    box-sizing: border-box;
+    transition: padding-top 0.3s ease;
+}
+
+#main-content > * {
+    margin: 0 auto; /* Center content */
+    padding: 20px;
+    max-width: 75%; /* Creates ~25% right margin relative to main-content in desktop */
+    box-sizing: border-box;
+}
+
+/* Override common elements to ensure consistency */
+#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6 {
+    font-family: 'CMU', sans-serif;
+    margin: 0.5em 0;
+}
+
+#main-content p, #main-content ul, #main-content ol, #main-content li, #main-content div {
+    font-family: 'CMU', sans-serif;
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+#main-content ul, #main-content ol {
+    padding-left: 40px;
+}
+
+#main-content a {
+    color: -webkit-link;
+    text-decoration: underline;
+}
+
+/* Override specific styles from loaded content */
+#main-content .content-section {
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important; /* Ensure it takes full available width before max-width applies */
+}
+
+#header {
+    padding: 1px;
+    margin-bottom: 15px;
+    cursor: pointer; 
+}
+
+#menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    margin-bottom: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 0px;
+    color: black;
+}
+
+#menu a.selected {
+    font-family: 'SecondaryFont';
+}
+
+.subbio {
+    font-size: 0.9em;
+}
+
+#header-top {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    #sidebar {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background: white;
+    }
+    #main-content {
+        width: 100%;
+        padding: 0;
+        margin: 0; /* Reset any margins */
+        box-sizing: border-box;
+    }
+    #main-content > * {
+        width: 50%; /* Explicitly set width to 50% for ~25% margins on both sides */
+        max-width: none; /* Remove max-width to enforce width: 50% */
+        margin-left: 25%; /* Explicit 25% left margin */
+        margin-right: 25%; /* Explicit 25% right margin */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    #header-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 10px 20px;
+        z-index: 1000;
+    }
+    #header {
+        margin-bottom: 0;
+    }
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 0;
+        padding: 10px 20px;
+        background: white;
+        position: fixed;
+        top: 0; /* Adjusted dynamically in JS */
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+    #menu li {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    #menu li:last-child {
+        margin-right: 0;
+    }
+    #menu a {
+        font-size: 16px;
+        display: inline-block;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #main-content > * {
+        width: 50%; /* Maintain equal margins */
+        margin-left: 25%;
+        margin-right: 25%;
+        padding: 10px;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .subbio {
+        font-size: 0.8em;
+    }
+    #menu a {
+        font-size: 14px;
+        padding: 3px;
+    }
+}
       </style>
    </head>
    <body>
@@ -250,73 +320,83 @@
                </div>
             </div>
          </div>
-         <ul id="menu">
-            <li><a href="publications.html" onclick="loadContent('publications.html')">publications</a></li>
-            <li><a href="projects.html" onclick="loadContent('projects.html')">software</a></li>
-            <li><a href="resume.html" onclick="loadContent('resume.html')">about</a></li>
-            <li><a href="contact.html" onclick="loadContent('contact.html')">contact</a></li>
-         </ul>
+   <ul id="menu">
+    <li><a href="javascript:void(0)" onclick="loadContent('publications.html', event)">publications</a></li>
+    <li><a href="javascript:void(0)" onclick="loadContent('projects.html', event)">software</a></li>
+    <li><a href="javascript:void(0)" onclick="loadContent('resume.html', event)">about</a></li>
+    <li><a href="javascript:void(0)" onclick="loadContent('contact.html', event)">contact</a></li>
+</ul>
       </div>
       <div id="main-content">
       </div>
       <script>
-         function loadContent(url) {
-            var menuItems = document.querySelectorAll('#menu a');
-            menuItems.forEach(item => {
-               item.classList.remove('selected');
-            });
-            fetch(url)
-               .then(response => response.text())
-               .then(data => {
-                  document.getElementById('main-content').innerHTML = data;
-                  if (window.MathJax) {
-                     MathJax.typeset();
-                  }
-                  if (window.hljs) {
-                     hljs.highlightAll();
-                  }
-                  // Re-adjust layout after content is loaded
-                  adjustLayout();
-               })
-               .catch(error => console.error('Error loading content:', error));
-            event.preventDefault();
-            var selectedItem = event.target;
-            selectedItem.classList.add('selected');
-         }
+         function loadContent(url, event) {
+    event.preventDefault(); // Prevent the default navigation behavior
+    var menuItems = document.querySelectorAll('#menu a');
+    menuItems.forEach(item => {
+        item.classList.remove('selected');
+    });
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('main-content').innerHTML = data;
+            if (window.MathJax) {
+                MathJax.typeset();
+            }
+            if (window.hljs) {
+                hljs.highlightAll();
+            }
+            // Adjust layout after content is loaded
+            adjustLayout(event.target);
+        })
+        .catch(error => console.error('Error loading content:', error));
+    var selectedItem = event.target;
+    selectedItem.classList.add('selected');
+}
          function goHome() {
             var menuItems = document.querySelectorAll('#menu a');
             menuItems.forEach(item => {
                item.classList.remove('selected');
             });
             document.getElementById('main-content').innerHTML = '';
-            // Re-adjust layout after clearing content
-            adjustLayout();
+            // Reset layout for home
+            adjustLayout(null);
          }
          function goSztaki() {
             window.open("https://sztaki.hun-ren.hu/en", "_blank");
          }
          // Adjust menu and main content positions
-         function adjustLayout() {
-            if (window.innerWidth <= 768) {
-               const headerHeight = document.getElementById('header-top').offsetHeight;
-               const menu = document.querySelector('#menu');
-               // Ensure menu is positioned below header
-               menu.style.top = `${headerHeight}px`;
-               // Calculate menu height including padding
-               const menuHeight = menu.offsetHeight;
-               // Set main content margin to start below menu
-               document.getElementById('main-content').style.marginTop = `${headerHeight + menuHeight}px`;
-               // Debugging log to verify heights
-               console.log(`Header Height: ${headerHeight}px, Menu Height: ${menuHeight}px, Main Content Margin-Top: ${headerHeight + menuHeight}px`);
-            } else {
-               const menu = document.querySelector('#menu');
-               menu.style.top = 'auto';
-               document.getElementById('main-content').style.marginTop = '0';
-            }
-         }
+         function adjustLayout(selectedItem) {
+    const mainContent = document.getElementById('main-content');
+    if (window.innerWidth <= 768) {
+        // Mobile mode: Position menu below header, content below menu (unchanged)
+        const headerHeight = document.getElementById('header-top').offsetHeight;
+        const menu = document.querySelector('#menu');
+        menu.style.top = `${headerHeight}px`;
+        const menuHeight = menu.offsetHeight;
+        mainContent.style.marginTop = `${headerHeight + menuHeight}px`;
+        mainContent.style.paddingTop = '0';
+        // Ensure horizontal margins are not affected
+        mainContent.style.marginLeft = '0';
+        mainContent.style.marginRight = '0';
+        console.log(`Mobile - Header Height: ${headerHeight}px, Menu Height: ${menuHeight}px, Main Content Margin-Top: ${headerHeight + menuHeight}px`);
+    } else {
+        // Desktop mode: Align content with the top of the menu
+        const menu = document.querySelector('#menu');
+        const sidebar = document.getElementById('sidebar');
+        // Calculate the offset of the menu relative to the sidebar
+        const menuOffsetTop = menu.getBoundingClientRect().top - sidebar.getBoundingClientRect().top;
+        mainContent.style.paddingTop = `${menuOffsetTop}px`;
+        mainContent.style.marginTop = '0';
+        mainContent.style.marginLeft = '0';
+        mainContent.style.marginRight = '0';
+        menu.style.top = 'auto';
+        console.log(`Desktop - Menu Offset: ${menuOffsetTop}px, Main Content Padding-Top: ${menuOffsetTop}px`);
+    }
+}
          // Run on load and resize
-         window.addEventListener('load', adjustLayout);
-         window.addEventListener('resize', adjustLayout);
+         window.addEventListener('load', () => adjustLayout(null));
+         window.addEventListener('resize', () => adjustLayout(document.querySelector('#menu a.selected')));
          function mover(section_id, $event) {
             let menus = document.querySelectorAll(".menusection");
             menus.forEach((menu) => { menu.classList.add('hidden'); });
