@@ -136,11 +136,13 @@ p {
 }
 
 #sidebar {
-    width: 26%;
-    padding: 5%;
+    width: 32%;
+    padding-top: 7%;
+    padding-left: 16%;
     box-sizing: border-box;
     background: white;
 }
+
 
 /* Main content styling */
 #main-content {
@@ -159,18 +161,16 @@ p {
 
 /* Override common elements to ensure consistency */
 #main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6 {
-    font-family: 'CMU', sans-serif;
     margin: 0.5em 0;
 }
 
 #main-content p, #main-content ul, #main-content ol, #main-content li, #main-content div {
-    font-family: 'CMU', sans-serif;
     margin: 0.5em 0;
     padding: 0;
 }
 
 #main-content ul, #main-content ol {
-    padding-left: 40px;
+    padding-left: 0px;
 }
 
 #main-content a {
@@ -204,7 +204,7 @@ p {
 
 #menu a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     display: block;
     padding: 0px;
     color: black;
@@ -222,12 +222,30 @@ p {
     display: flex;
     flex-direction: column;
 }
-
+    .paper a {
+    color: black;
+    text-decoration: none;
+    }
+    .paper a:hover {
+    text-decoration: underline;
+    }
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     body {
         flex-direction: column;
     }
+    #menu a {
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 0px;
+    color: black;
+}
+
+.paper {
+    color: black;
+    text-decoration: none;
+}
     #sidebar {
         width: 100%;
         padding: 20px;
@@ -236,7 +254,7 @@ p {
     }
     #main-content {
         width: 100%;
-        padding: 0;
+        padding: 10px;
         margin: 0; /* Reset any margins */
         box-sizing: border-box;
     }
@@ -254,7 +272,7 @@ p {
         left: 0;
         right: 0;
         background: white;
-        padding: 10px 20px;
+        padding: 20px 32px;
         z-index: 1000;
     }
     #header {
@@ -296,13 +314,13 @@ p {
         padding: 10px;
     }
     h2 {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
     .subbio {
         font-size: 0.8em;
     }
     #menu a {
-        font-size: 14px;
+        font-size: 18px;
         padding: 3px;
     }
 }
