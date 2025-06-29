@@ -44,6 +44,27 @@
          .clicked {
          font-family: 'SecondaryFont';
          }
+         .content-section 
+         {
+            margin-top: 0;
+         }
+#main-content p, #main-content ul, #main-content ol, #main-content li, #main-content div {
+    margin: 0.3em 0;
+    padding: 0;
+}
+.menusection {
+    max-width: 100%; /* Ensure the section doesn't exceed the container's width */
+    overflow-x: auto; /* Add horizontal scrollbar only when content overflows */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    padding: 0; /* Optional: Add padding to prevent content from touching edges */
+}
+
+/* Ensure images and other media within menusection stay within bounds */
+.menusection img, .menusection pre, .menusection div {
+    max-width: 100%; /* Prevent images and other elements from exceeding container width */
+    height: auto; /* Maintain aspect ratio for images */
+}
+
       </style>
    </head>
    <body>
