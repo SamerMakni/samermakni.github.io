@@ -392,12 +392,12 @@ p {
         const menu = document.querySelector('#menu');
         menu.style.top = `${headerHeight}px`;
         const menuHeight = menu.offsetHeight;
-        mainContent.style.marginTop = `${headerHeight + menuHeight}px`;
+        mainContent.style.marginTop = `${headerHeight + 10}px`;
         mainContent.style.paddingTop = '0';
         // Ensure horizontal margins are not affected
         mainContent.style.marginLeft = '0';
         mainContent.style.marginRight = '0';
-        console.log(`Mobile - Header Height: ${headerHeight}px, Menu Height: ${menuHeight}px, Main Content Margin-Top: ${headerHeight + menuHeight}px`);
+        console.log(`Mobile - Header Height: ${headerHeight}px, Menu Height: ${menuHeight}px, Main Content Margin-Top: ${headerHeight + 10}px`);
     } else {
         // Desktop mode: Align content with the top of the menu
         const menu = document.querySelector('#menu');
